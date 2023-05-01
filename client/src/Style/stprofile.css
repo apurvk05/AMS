@@ -1,0 +1,100 @@
+.box {
+    background: linear-gradient(45deg, #1e0864 20%, #de209c 90%);
+    border-radius: 5px;
+    color: white;
+    padding: 0px;
+    height: 200px;
+    width: 400px;
+    box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+    text-align: center;
+    transition: 0.6s;
+    position: relative;
+    left: 10%;
+}
+
+.box:hover {
+    background: linear-gradient(45deg, #0c1c89 30%, #FF8E53 90%);
+    border-radius: 5px;
+    color: white;
+    width: 550px;
+    height: 420px;
+    box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+}
+
+.img-box {
+    height: 190px;
+    width: 190px;
+    top: -80px;
+    object-fit: cover;
+    border-radius: 100%;
+    /* border: 1px solid black;  */
+    box-shadow: 0 3px 5px 2px rgba(255, 142, 164, 0.3);
+    position: relative;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prof-container {
+    margin: 10px;
+    padding-top: 80px;
+
+}
+
+.name {
+    margin-top: -75px;
+    font-size: 27px;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+.des {
+    margin-top: -24px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 50px;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .box {
+        background: linear-gradient(45deg, #1e0864 20%, #de209c 90%);
+        border-radius: 5px;
+        color: white;
+        padding: 0px;
+        height: 200px;
+        width: 80%;
+        box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+        text-align: center;
+        transition: 0.6s;
+        position: relative;
+        left: 0%;
+    }
+    .img-box {
+        height: 190px;
+        width: 190px;
+        top: -80px;
+        object-fit: cover;
+        border-radius: 100%;
+        /* border: 1px solid black;  */
+        box-shadow: 0 3px 5px 2px rgba(255, 142, 164, 0.3);
+        background-color: white;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box:hover {
+        background: linear-gradient(45deg, #0c1c89 30%, #FF8E53 90%);
+        border-radius: 5px;
+        color: white;
+        width: 100%;
+        height: 420px;
+        box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+    } 
+    .prof-container {
+        margin: 10px;
+        padding-top: 80px;
+    }   
+}
