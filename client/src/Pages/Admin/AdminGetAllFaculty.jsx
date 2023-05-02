@@ -63,6 +63,7 @@ const AdminGetAllFaculty = () => {
                                 </div>
                                 {!isLoading && <button type="submit" className="btn btn-info btn-block  ">Search</button>}
                             </form>
+                            <br/>
 
 
                         </div>
@@ -71,8 +72,8 @@ const AdminGetAllFaculty = () => {
                                 <table className="table table-striped">
                                 
                             
-                            {store.admin.allFaculty.length !== 0 && <table className="table border">
-                                        <thead className="thead-inverse">
+                                    {store.admin.allFaculty.length !== 0 && <table className="table table-striped table-bordered  table-hover">
+                                        <thead className="thead-inverse table-dark">
                                     <tr>
                                         <th scope="col">S.No</th>
                                         <th scope="col">Registration Number</th>

@@ -6,6 +6,7 @@ import { adminAddAdmin } from '../../redux/action/adminAction'
 import AdminHomeHelper from '../../Components/AdminHomeHelper'
 import {Button} from '@mui/material'
 import '../../Style/Home.css'
+import { WindowSharp } from '@mui/icons-material'
 
 
 
@@ -41,6 +42,7 @@ const AdminAddAdmin = () => {
             contactNumber,
             dob: dob.split("-").reverse().join("-")
         }))
+       
     }
 
     useEffect(() => {

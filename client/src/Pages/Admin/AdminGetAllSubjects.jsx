@@ -76,6 +76,7 @@ const AdminGetAllSubjects = () => {
                                     {!isLoading && <button type="submit" className="btn btn-info btn-block  ">Search</button>}
                                    
                                 </form>
+                                <br/>
 
 
                             </div>
@@ -83,8 +84,8 @@ const AdminGetAllSubjects = () => {
                                 <div className="table-responsive">
                                     <table className="table table-striped">
 
-                                {store.admin.allSubject.length !== 0 && <table className="table border">
-                                    <thead>
+                                        {store.admin.allSubject.length !== 0 && <table className="table table-striped table-bordered  table-hover">
+                                    <thead className='table-dark'>
                                         <tr>
                                             <th scope="col">S.No</th>
                                             <th scope="col">Subject Code</th>

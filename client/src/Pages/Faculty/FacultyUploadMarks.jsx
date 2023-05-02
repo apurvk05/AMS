@@ -162,8 +162,8 @@ const FacultyUploadMarks = () => {
                                 {errorHelper.totalMarks && (<div classNameName="invalid-feedback">{errorHelper.totalMarks}</div>)}
                             </div>
 
-                            <table className="table">
-                                <thead>
+                            <table className="table table-striped table-bordered  table-hover">
+                                <thead className='table-dark'>
                                     <tr>
                                         <th scope="col">Roll Number</th>
                                         <th scope="col"> Student Name</th>

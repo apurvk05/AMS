@@ -18,8 +18,8 @@ const StudentSubjectList = () => {
                 <div className="container">
                     <div className="row mt-5">
                         <div className="col-md-6 m-auto">
-                            <table className="table border">
-                                <thead>
+                            <table className="table table-striped table-bordered  table-hover">
+                                <thead className="table-dark">
                                     <tr>
                                         <th scope="col">S.No</th>
                                         <th scope="col">Subject Code</th>

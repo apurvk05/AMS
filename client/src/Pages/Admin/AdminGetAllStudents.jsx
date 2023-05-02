@@ -79,6 +79,7 @@ const AdminGetAllFaculty = () => {
                               
                                
                             </form>
+                            <br/>
 
 
                         </div>
@@ -86,8 +87,8 @@ const AdminGetAllFaculty = () => {
                             <div className="table-responsive">
                                 <table className="table table-striped">
 
-                            {store.admin.allStudent.length !== 0 && <table className="table border">
-                                <thead>
+                                    {store.admin.allStudent.length !== 0 && <table className="table table-striped table-bordered  table-hover">
+                                <thead className='table-dark'>
                                     <tr>
                                         <th scope="col">S.No</th>
                                         <th scope="col">Registration Number</th>

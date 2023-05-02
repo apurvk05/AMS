@@ -28,8 +28,8 @@ const StudentTestPerformance = () => {
                             <div className="col-md-8 m-auto">
                                 {store.student.allMarks.InternalAssessment.length !== 0 ? <>
                                     <h4>InternalAssessment</h4>
-                                    <table className="table border">
-                                        <thead>
+                                    <table id="example" className="table table-striped table-bordered table-info table-hover">
+                                        <thead className='table-dark'>
                                             <tr>
                                                 <th scope="col">S.No</th>
                                                 <th scope="col">Subject Code</th>
@@ -59,8 +59,8 @@ const StudentTestPerformance = () => {
                             <div className="col-md-8 m-auto">
                                 {store.student.allMarks.ClassPresentation.length !== 0 ? <>
                                     <h4>ClassPresentation</h4>
-                                    <table className="table border">
-                                        <thead>
+                                    <table className="table table-striped table-bordered table-warning table-hover">
+                                        <thead className='table-dark'>
                                             <tr>
                                                 <th scope="col">S.No</th>
                                                 <th scope="col">Subject Code</th>
@@ -89,8 +89,8 @@ const StudentTestPerformance = () => {
                             <div className="col-md-8 m-auto">
                                 {store.student.allMarks.Practical_1.length !== 0 ? <>
                                     <h4>Practical 1</h4>
-                                    <table className="table border">
-                                        <thead>
+                                    <table className=" table table-striped table-bordered table-primary table-hover">
+                                        <thead className='table-dark'>
                                             <tr>
                                                 <th scope="col">S.No</th>
                                                 <th scope="col">Subject Code</th>
@@ -119,8 +119,8 @@ const StudentTestPerformance = () => {
                             <div className="col-md-8 m-auto">
                                 {store.student.allMarks.Practical_2.length !== 0 ? <>
                                     <h4>Practical 2</h4>
-                                    <table className="table border">
-                                        <thead>
+                                    <table className="table table-striped table-bordered table-success table-hover">
+                                        <thead className='table-dark'>
                                             <tr>
                                                 <th scope="col">S.No</th>
                                                 <th scope="col">Subject Code</th>
@@ -149,8 +149,8 @@ const StudentTestPerformance = () => {
                             <div className="col-md-8 m-auto">
                                 {store.student.allMarks.Activity.length !== 0 ? <>
                                     <h4>Activity</h4>
-                                    <table className="table border">
-                                        <thead>
+                                    <table className="table table-striped table-bordered table-danger table-hover">
+                                        <thead className='table-dark'>
                                             <tr>
                                                 <th scope="col">S.No</th>
                                                 <th scope="col">Subject Code</th>
@@ -179,8 +179,8 @@ const StudentTestPerformance = () => {
                             <div className="col-md-8 m-auto">
                                 {store.student.allMarks.Viva.length !== 0 ? <>
                                     <h4>Viva</h4>
-                                    <table className="table border">
-                                        <thead>
+                                    <table className="table table-striped table-bordered table-secondary table-hover">
+                                        <thead className='table-dark'>
                                             <tr>
                                                 <th scope="col">S.No</th>
                                                 <th scope="col">Subject Code</th>
@@ -209,8 +209,8 @@ const StudentTestPerformance = () => {
                             <div className="col-md-8 m-auto">
                                 {store.student.allMarks.OJT.length !== 0 ? <>
                                     <h4>OJT</h4>
-                                    <table className="table border">
-                                        <thead>
+                                    <table className="table table-striped table-bordered table-dark table-hover">
+                                        <thead className='table-dark'>
                                             <tr>
                                                 <th scope="col">S.No</th>
                                                 <th scope="col">Subject Code</th>

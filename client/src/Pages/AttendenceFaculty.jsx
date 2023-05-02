@@ -163,8 +163,8 @@ const AttendenceFaculty = () => {
 
                             <div className="col-md-8 col-lg-9">
                                 <div className="table-responsive">
-                            <table className="table table-striped">
-                                <thead>
+                                    <table className="table table-striped table-bordered  table-hover">
+                                <thead className='table-dark'>
                                     <tr>
                                         <td><div className="form-check">
                                             {/* <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" /> */}
