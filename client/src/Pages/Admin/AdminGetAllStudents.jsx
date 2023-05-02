@@ -46,7 +46,7 @@ const AdminGetAllFaculty = () => {
                                         })} id="departmentId">
                                         <option>Select</option>
                                         <option value="BCA">BCA</option>
-                                        <option value="BBE">BBE</option>
+                                        <option value="BBA-IB">BBA-IB</option>
                                         <option value="BCP">BCP</option>
                                         <option value="BBA">BBA</option>
                                         <option value="BA(JMC)">BA(JMC)</option>
