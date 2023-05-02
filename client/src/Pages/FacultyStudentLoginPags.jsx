@@ -62,7 +62,7 @@ const FacultyStudentLoginPags = () => {
                                     onClick={handleAdminOpen}
                                     size='large'
                                     >
-                                    Aman
+                                    Admin
                                 </Button>&nbsp;&nbsp;
                                 
                                 <Button
