@@ -23,10 +23,10 @@ const AdminGetAllSubjects = () => {
     }
     useEffect(() => {
         if (store.admin.allSubject.length !== 0) {
-            setIsLoading(false)
+                setIsLoading(false)
         }
 
-    }, [store.admin.allSubject.length])
+    }, [store.admin.allSubject.length, isLoading])
     return (
         <div>
             <div>

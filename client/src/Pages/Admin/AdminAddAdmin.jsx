@@ -53,12 +53,12 @@ const AdminAddAdmin = () => {
 
     useEffect(() => {
         if (store.error || store.admin.adminAddAdminFlag) {
-            setIsLoading(false)
+                setIsLoading(false)
         }
         else {
             setIsLoading(true)
         }
-    }, [store.error, store.admin.adminAddAdminFlag])
+    }, [store.error, store.admin.adminAddAdminFlag, isLoading])
 
     return (
 

@@ -59,7 +59,7 @@ const AdminAddStudent = () => {
     if (store.error || store.admin.adminAddStudentFlag) {
       setIsLoading(false);
     }
-  }, [store.error, store.admin.adminAddStudentFlag]);
+  }, [store.error, store.admin.adminAddStudentFlag, isLoading]);
   return (
     <div>
       {store.admin.isAuthenticated ? (

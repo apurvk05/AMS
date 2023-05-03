@@ -26,10 +26,9 @@ const AdminGetAllFaculty = () => {
 
     useEffect(() => {
         if (store.admin.allStudent.length !== 0) {
-            setIsLoading(false)
+                setIsLoading(false)
         }
-
-    }, [store.admin.allStudent.length])
+    }, [store.admin.allStudent.length, isLoading])
     return (
         <div>
             {store.admin.isAuthenticated ? <>
@@ -55,7 +54,7 @@ const AdminGetAllFaculty = () => {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="yearId">Year</label>
-                                    <select onChange={(e) => setYear(e.target.value)} className={classnames("form-control",
+                                    <select onChange={(e) => {setYear(e.target.value); setIsLoading(false)}} className={classnames("form-control",
                                         {
                                             'is-invalid': error.year
                                         })} id="yearId">
@@ -86,7 +85,6 @@ const AdminGetAllFaculty = () => {
                         <div className="col-md-8 col-lg-9">
                             <div className="table-responsive">
                                 <table className="table table-striped">
-
                                     {store.admin.allStudent.length !== 0 && <table className="table table-striped table-bordered  table-hover">
                                 <thead className='table-dark'>
                                     <tr>

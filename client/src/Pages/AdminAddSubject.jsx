@@ -44,9 +44,9 @@ const AdminAddSubject = () => {
 
     useEffect(() => {
         if (store.error || store.admin.adminAddSubjectFlag) {
-            setIsLoading(false)
+                setIsLoading(false)
         }
-    }, [store.error, store.admin.adminAddSubjectFlag])
+    }, [store.error, store.admin.adminAddSubjectFlag, isLoading])
 
     return (
         <div>

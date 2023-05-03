@@ -51,12 +51,12 @@ const AdminAddFaculty = () => {
 
     useEffect(() => {
         if (store.error || store.admin.adminAddFacultyFlag) {
-            setIsLoading(false)
+                setIsLoading(false)
         }
         else {
             setIsLoading(true)
         }
-    },[store.error,store.admin.adminAddFacultyFlag])
+    },[store.error,store.admin.adminAddFacultyFlag, isLoading])
     return (
        
         <div>

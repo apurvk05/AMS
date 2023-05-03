@@ -23,10 +23,9 @@ const AdminGetAllFaculty = () => {
 
     useEffect(() => {
         if (store.admin.allFaculty.length !== 0) {
-            setIsLoading(false)
+                setIsLoading(false)
         }
-        
-    }, [store.admin.allFaculty.length])
+    }, [store.admin.allFaculty.length, isLoading])
     
     
     return (
