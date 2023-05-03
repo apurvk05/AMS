@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
-
+import './../Style/profile.css'
 
 import FacultyHomeHelper from '../Components/FacultyHomeHelper'
 
@@ -14,13 +14,13 @@ const FacultyInterface = () => {
             {store.faculty.isAuthenticated ? <>
                 <FacultyHomeHelper />
 
-                <div className="container profile">
+                <div className="container profile bg-secondary fac-profile">
                     <div className="main-body">
 
                         <div className="row gutters-sm">
                             <div className="col-md-4 mb-3">
                                 <div className="card">
-                                    <div className="card-body">
+                                    <div className="card-body" >
                                         <div className="d-flex flex-column align-items-center text-center">
                                             <img
                                                 src={store.faculty.faculty.faculty.avatar}

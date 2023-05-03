@@ -13,10 +13,10 @@ const AdminHome = () => {
     const history = useNavigate()
     return (
         <div>
-           
+
             {store.admin.isAuthenticated ? <>
                 <AdminHomeHelper />
-                <div className="container">
+                <div className="container fac-profile bg-secondary">
                     <div className="main-body">
 
                         <div className="row gutters-sm">
@@ -111,8 +111,8 @@ const AdminHome = () => {
 
 
 
-                </> : (history('/'))}
-                
+            </> : (history('/'))}
+
         </div>
     )
 }

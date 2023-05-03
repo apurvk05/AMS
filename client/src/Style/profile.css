@@ -49,3 +49,11 @@
 .shadow-none {
   box-shadow: none !important;
 }
+
+@media screen and (min-width: 480px) {
+  
+  .fac-profile{
+    position: relative;
+    left: 8%;
+  }
+}
