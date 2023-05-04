@@ -7,7 +7,7 @@ import {
 } from '../actionTypes'
 
 const url = "https://sore-teal-panther-sock.cyclic.app"
-const url1 = "http://localhost:5000"
+const url1 = "https://ams-backend-ecru.vercel.app/"
 
 const setAdmin = (data) => {
     return {
