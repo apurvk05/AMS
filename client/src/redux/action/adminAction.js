@@ -7,8 +7,8 @@ import {
 } from '../actionTypes'
 
 // const url = "https://sore-teal-panther-sock.cyclic.app"
-const url ="https://ams-backend-ecru.vercel.app"
-const url1 = "https://ams-backend-ecru.vercel.app"
+const url ="https://easy-plum-katydid-toga.cyclic.app"
+const url1 = "https://easy-plum-katydid-toga.cyclic.app"
 
 const setAdmin = (data) => {
     return {
