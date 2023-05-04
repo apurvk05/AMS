@@ -6,8 +6,9 @@ import {
     GET_SUBJECTS
 } from '../actionTypes'
 
-const url = "https://sore-teal-panther-sock.cyclic.app"
-const url1 = "https://ams-backend-ecru.vercel.app/"
+// const url = "https://sore-teal-panther-sock.cyclic.app"
+const url ="https://ams-backend-ecru.vercel.app"
+const url1 = "https://ams-backend-ecru.vercel.app"
 
 const setAdmin = (data) => {
     return {
