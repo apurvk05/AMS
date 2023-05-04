@@ -161,7 +161,7 @@ const FacultyUploadMarks = () => {
                                     value={totalMarks} onChange={(e) => setTotalMarks(e.target.value)} />
                                 {errorHelper.totalMarks && (<div classNameName="invalid-feedback">{errorHelper.totalMarks}</div>)}
                             </div>
-
+                            <div className='table-responsive'>
                             <table className="table table-striped table-bordered  table-hover">
                                 <thead className='table-dark'>
                                     <tr>
@@ -184,6 +184,7 @@ const FacultyUploadMarks = () => {
                                     }
                                 </tbody>
                             </table>
+                            </div>
                             <button type="submit" className="btn btn-primary ml-1">Submit</button>&nbsp;
                             <button type='reset' onClick={() => window.location.reload()} className="btn btn-primary ml-1">Back</button>
                         </form>

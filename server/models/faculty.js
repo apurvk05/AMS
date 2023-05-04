@@ -19,6 +19,7 @@ const facultySchema = new Schema({
     },
     registrationNumber: {
         type: String,
+        unique: true
     },
     gender: {
         type: String,

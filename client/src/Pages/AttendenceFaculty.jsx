@@ -166,9 +166,6 @@ const AttendenceFaculty = () => {
                                     <table className="table table-striped table-bordered  table-hover">
                                 <thead className='table-dark'>
                                     <tr>
-                                        <td><div className="form-check">
-                                            {/* <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" /> */}
-                                        </div></td>
                                         <th scope="col">Status</th>
                                         <th scope="col">Roll Number</th>
                                         <th scope="col">Student Name</th>
@@ -178,11 +175,6 @@ const AttendenceFaculty = () => {
                                     {
                                         store.faculty.fetchedStudents.map((obj, index) =>
                                             <tr>
-                                                <td><div className="form-check">
-                                                    
-                                                    {/* <input type="button" value={obj._id} onChange={handleInputChange} id="defaultCheck1" className='btn btn-success'>Present</input> */}
-                                                    {/* <input type="button" className='btn btn-danger'>Absent</input> */}
-                                                </div></td>
                                                 <pre>      <input className="form-check-input col-span-1 border-2 w-16 h-4 mt-3 px-2  " type="checkbox"  value={obj._id} onChange={handleInputChange} id="defaultCheck1" /></pre>
                                                 <td key={index}>{obj.collegeRoll}</td>
                                                 <td>{obj.name}</td>

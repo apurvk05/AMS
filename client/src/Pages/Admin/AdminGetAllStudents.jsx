@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { adminGetAllStudent } from '../../redux/action/adminAction'
+import { adminGetAllStudent, adminDeleteStudent } from '../../redux/action/adminAction'
 import AdminHomeHelper from '../../Components/AdminHomeHelper'
 import classnames from 'classnames'
+import { Button } from '@mui/material'
 
 const AdminGetAllFaculty = () => {
     const store = useSelector((store) => store)
@@ -11,12 +12,14 @@ const AdminGetAllFaculty = () => {
     const [department, setDepartment] = useState('')
     const [year, setYear] = useState('')
     const [isLoading, setIsLoading] = useState(false)
-    
-    
+
 
     const [error, setError] = useState({})
     const history = useNavigate()
 
+    const handleDelete = (regId) => {
+        dispatch(adminDeleteStudent({ regId }))
+    }
 
     const formHandler = (e) => {
         e.preventDefault()
@@ -93,6 +96,7 @@ const AdminGetAllFaculty = () => {
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Section</th>
+                                        <th scope="col">Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -104,6 +108,7 @@ const AdminGetAllFaculty = () => {
                                                 <td>{res.name}</td>
                                                 <td>{res.email}</td>
                                                 <td>{res.section}</td>
+                                                <td><Button onClick={() => handleDelete(res.registrationNumber)}><i className="bi bi-trash3 text-danger"></i></Button></td>
                                             </tr>
                                         )
                                     }

@@ -9,7 +9,9 @@ const initialState = {
     adminAddStudentFlag: false,
     adminAddAdminFlag: false,
     adminAddSubjectFlag: false,
-    allSubject: {},
+    adminDeleteFacultyFlag: false,
+    adminDeleteStudentFlag: false,
+    adminDeleteSubjectFlag: false,
     allFaculty: [],
     allStudent: [],
     allSubject: []
@@ -56,6 +58,24 @@ const adminReducer = (state = initialState, action) => {
             return {
                 ...state,
                 adminAddAdminFlag: action.payload
+            }
+        }
+        case "ADMIN_DELETE_FACULTY_FLAG": {
+            return {
+                ...state,
+                adminDeleteFacultyFlag: action.payload
+            }
+        }
+        case "ADMIN_DELETE_STUDENT_FLAG": {
+            return {
+                ...state,
+                adminDeleteStudentFlag: action.payload
+            }
+        }
+        case "ADMIN_DELETE_SUBJECT_FLAG": {
+            return {
+                ...state,
+                adminDeleteSubjectFlag: action.payload
             }
         }
         case "GET_ALL_FACULTY": {

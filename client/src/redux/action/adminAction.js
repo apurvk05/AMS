@@ -7,10 +7,39 @@ import {
 } from '../actionTypes'
 
 const url = "https://sore-teal-panther-sock.cyclic.app"
+const url1 = "http://localhost:5000"
 
 const setAdmin = (data) => {
     return {
         type: SET_ADMIN,
+        payload: data
+    }
+}
+
+const adminPostNoticeFlag = (data) => {
+    return {
+        type: "ADMIN_POST_NOTICE_FLAG",
+        payload: data
+    }
+}
+
+const adminDeleteFacultyFlag = (data) => {
+    return {
+        type: "ADMIN_DELETE_FACULTY_FLAG",
+        payload: data
+    }
+}
+
+const adminDeleteStudentFlag = (data) => {
+    return {
+        type: "ADMIN_DELETE_STUDENT_FLAG",
+        payload: data
+    }
+}
+
+const adminDeleteSubjectFlag = (data) => {
+    return {
+        type: "ADMIN_DELETE_SUBJECT_FLAG",
         payload: data
     }
 }
@@ -217,6 +246,7 @@ export const adminGetAllFaculty = (department) => {
     }
 }
 
+
 export const adminGetAllStudent = (searchCredentials) => {
     return async (dispatch) => {
         try {
@@ -271,3 +301,71 @@ export const adminLogout = () =>
         // Set current user to {} which will set isAuthenticated to false
         dispatch(setAdmin({}));
     };
+
+
+
+export const adminDeleteFaculty = (regId) => {
+    return async (dispatch) => {
+        try {
+            const { data } = await axios({
+                method: 'Post',
+                url: url1 + "/api/admin/deleteFaculty",
+                data: regId
+            })
+            dispatch(adminDeleteFacultyFlag(true))
+            alert("Faculty Deleted Successfully")
+        }
+        catch (err) {
+            dispatch({
+                type: SET_ERRORS,
+                payload: err.response.data
+            })
+        }
+    }
+}
+
+export const adminDeleteStudent = (regId) => {
+    return async (dispatch) => {
+        try {
+            const { data } = await axios({
+                method: 'Post',
+                url: url1 + "/api/admin/deleteStudent",
+                data: regId
+            })
+            dispatch(adminDeleteStudentFlag(true))
+            alert("Student Deleted Successfully")
+        }
+        catch (err) {
+            dispatch({
+                type: SET_ERRORS,
+                payload: err.response.data
+            })
+        }
+    }
+}
+
+export const adminDeleteSubject = (code) => {
+    return async (dispatch) => {
+        try {
+            const { data } = await axios({
+                method: 'Post',
+                url: url1 + "/api/admin/deleteSubject",
+                data: code
+            })
+            dispatch(adminDeleteSubjectFlag(true))
+            alert("Subject Deleted Successfully")
+        }
+        catch (err) {
+            dispatch({
+                type: SET_ERRORS,
+                payload: err.response.data
+            })
+        }
+    }
+}
+
+
+
+
+
+// FOR NOTICE

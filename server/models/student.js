@@ -40,7 +40,8 @@ const studentSchema = new Schema({
         type: String
     },
     registrationNumber: {
-        type: String
+        type: String,
+        unique: true,
     },
     department: {
         type: String,

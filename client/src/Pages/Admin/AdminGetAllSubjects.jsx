@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { adminGetAllSubject } from '../../redux/action/adminAction'
+import { adminDeleteSubject, adminGetAllSubject } from '../../redux/action/adminAction'
 import AdminHomeHelper from '../../Components/AdminHomeHelper'
 import classnames from 'classnames'
+import { Button } from '@mui/material'
 
 const AdminGetAllSubjects = () => {
     const store = useSelector((store) => store)
@@ -21,6 +22,11 @@ const AdminGetAllSubjects = () => {
         dispatch(adminGetAllSubject({ department, year }))
 
     }
+
+    const handleDelete = (code) => {
+        dispatch(adminDeleteSubject({ code }))
+    }
+
     useEffect(() => {
         if (store.admin.allSubject.length !== 0) {
                 setIsLoading(false)
@@ -91,6 +97,7 @@ const AdminGetAllSubjects = () => {
                                             <th scope="col">Subject Code</th>
                                             <th scope="col">Subject Name</th>
                                             <th scope="col">Total Lectures</th>
+                                            <th scope="col">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -101,6 +108,7 @@ const AdminGetAllSubjects = () => {
                                                     <td>{res.subjectCode}</td>
                                                     <td>{res.subjectName}</td>
                                                     <td>{res.totalLectures}</td>
+                                                    <td><Button onClick={() => handleDelete(res.subjectCode)}><i className="bi bi-trash3 text-danger"></i></Button></td>
                                                 </tr>
                                             )
                                         }

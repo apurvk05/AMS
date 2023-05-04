@@ -75,9 +75,10 @@ const Home = (props) => {
                 <pre>  <i class="bi bi-person-workspace"><Link className='link_text' to="/admin/addStudent"> Add Students</Link></i></pre>
                 <pre>  <i class="bi bi-journal-check"><Link className='link_text' to="/admin/addSubject"> Add Subjects</Link></i></pre>
                 <pre>  <i class="bi bi-person-plus-fill"><Link className='link_text' to="/admin/addAdmin"> Add Admin</Link></i></pre>
-                <pre>  <i class="bi bi-clipboard-data"><Link className='link_text' to="/admin/allFaculties"> Teachers Data</Link></i></pre>
-                <pre>  <i class="bi bi-graph-up"><Link className='link_text' to="/admin/allStudents"> Students Data</Link></i></pre>
-                <pre>  <i class="bi bi-database-fill-lock"><Link className='link_text' to="/admin/allSubject"> Subjects Data</Link></i></pre>
+                <pre>  <i class="bi bi-bell-fill"><Link className='link_text' to="/error"> Post Notice</Link></i></pre>
+                <pre>  <i class="bi bi-clipboard-data"><Link className='link_text' to="/admin/allFaculties"> Remove Teacher</Link></i></pre>
+                <pre>  <i class="bi bi-graph-up"><Link className='link_text' to="/admin/allStudents"> Remove Student</Link></i></pre>
+                <pre>  <i class="bi bi-database-fill-lock"><Link className='link_text' to="/admin/allSubject"> Remove Subject</Link></i></pre>
                 <pre>  <i class="bi bi-node-plus"><Link className='link_text' to="/error"> Update Admin</Link></i></pre>
                 <pre>  <i class="bi bi-briefcase-fill"><Link className='link_text' to="/error"> Update Teachers</Link></i></pre>
                 <pre>  <i class="bi bi-diagram-3"><Link className='link_text' to="/error"> Update Students</Link></i></pre>

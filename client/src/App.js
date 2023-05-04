@@ -16,7 +16,6 @@ import Home from './Pages/StudentHome'
 import StudentDetails from './Pages/StudentDetails'
 import FacultyInterface from './Pages/FacultyInterface'
 import AttendenceFaculty from './Pages/AttendenceFaculty'
-
 import AdminAddStudent from './Pages/AdminAddStudent'
 import AdminAddFaculty from './Pages/AdminAddFaculty'
 import AdminAddSubject from './Pages/AdminAddSubject'
@@ -52,6 +51,7 @@ import StErrorpage from './Components/stuerror';
 import AboutUs from './Components/about';
 import FAboutUs from './Components/facabout';
 import SAboutUs from './Components/stuabout';
+import AddNotice from './Pages/AdminAddNotice';
 
  
 if (window.localStorage.facultyJwtToken) {
@@ -132,6 +132,7 @@ function App() {
           <Route exact path="/about" element={<AboutUs/>} />
           <Route exact path="/facabout" element={<FAboutUs />} />
           <Route exact path="/stuabout" element={<SAboutUs />} />
+          {/* <Route exact path="/admin/postNotice" element={<AddNotice />} /> */}
         </Routes>
       </Router>
     </div>

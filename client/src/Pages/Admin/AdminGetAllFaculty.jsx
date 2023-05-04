@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { adminGetAllFaculty } from '../../redux/action/adminAction'
+import { adminGetAllFaculty, adminDeleteFaculty } from '../../redux/action/adminAction'
 import AdminHomeHelper from '../../Components/AdminHomeHelper'
 import classnames from 'classnames'
 import '../../Style/Home.css'
+import { Button } from '@mui/material'
 
 const AdminGetAllFaculty = () => {
     const store = useSelector((store) => store)
@@ -19,6 +20,10 @@ const AdminGetAllFaculty = () => {
         e.preventDefault()
         setIsLoading(true)
         dispatch(adminGetAllFaculty({ department }))
+    }
+
+    const handleDelete = (regId) => {
+        dispatch(adminDeleteFaculty({regId}))
     }
 
     useEffect(() => {
@@ -79,6 +84,7 @@ const AdminGetAllFaculty = () => {
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Joining Year</th>
+                                        <th scope="col">Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -90,6 +96,7 @@ const AdminGetAllFaculty = () => {
                                                 <td>{res.name}</td>
                                                 <td>{res.email}</td>
                                                 <td>{res.joiningYear}</td>
+                                                <td><Button onClick={() => handleDelete(res.registrationNumber)}><i className="bi bi-trash3 text-danger"></i></Button></td>
                                             </tr>
                                         )
                                     }

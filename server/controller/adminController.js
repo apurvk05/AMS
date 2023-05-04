@@ -34,31 +34,6 @@ module.exports = {
             }
             const avatar = gravatar.url(email, { s: '200', r: 'pg', d: 'mm' })
             let departmentHelper;
-// *****************OLD DATA ***********************/
-            // if (department === "C.S.E") {
-            //     departmentHelper = "01"
-            // }
-            // else if (department === "E.C.E") {
-            //     departmentHelper = "02"
-            // }
-            // else if (department === "I.T") {
-            //     departmentHelper = "03"
-            // }
-            // else if (department === "Mechanical") {
-            //     departmentHelper = "04"
-            // }
-            // else if (department === "Civil") {
-            //     departmentHelper = "05"
-
-            // }
-            // else if (department === "E.E.E") {
-            //     departmentHelper = "06"
-            // }
-            // else {
-            //     departmentHelper = "00"
-            // }
-
-// *********************NEW DATA*********************/
 
             if (department === "BCA") {
                 departmentHelper = "01"
@@ -111,7 +86,7 @@ module.exports = {
                 dob,
             })
             await newAdmin.save()
-            return res.status(200).json({ success: true, message: "Admin registerd successfully", response: newAdmin })
+            return res.status(200).json({ success: true, message: "Admin registered successfully", response: newAdmin })
         }
         catch (error) {
             return res.status(400).json({ success: false, message: error.message })
@@ -478,6 +453,39 @@ module.exports = {
         }
         catch (err) {
             console.log("Error in gettting all students", err.message)
+        }
+    },
+
+    deleteFaculty: async(req, res, next) => {
+        try {
+            const {regId} = req.body
+            const faculty = await Faculty.findOneAndDelete({registrationNumber: regId })
+            res.status(200).json({ result: faculty })
+        }
+        catch (err) {
+            console.log("Error while deleting faculty", err.message)
+        }
+    }, 
+
+    deleteStudent: async (req, res, next) => {
+        try {
+            const { regId } = req.body
+            const student = await Student.findOneAndDelete({ registrationNumber: regId })
+            res.status(200).json({ result: student })
+        }
+        catch (err) {
+            console.log("Error while deleting student", err.message)
+        }
+    },
+
+    deleteSubject: async (req, res, next) => {
+        try {
+            const { code } = req.body
+            const subject = await Subject.findOneAndDelete({ subjectCode: code })
+            res.status(200).json({ result: subject })
+        }
+        catch (err) {
+            console.log("Error while deleting subject", err.message)
         }
     }
 }

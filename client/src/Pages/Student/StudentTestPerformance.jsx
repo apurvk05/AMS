@@ -25,10 +25,10 @@ const StudentTestPerformance = () => {
 
                     {store.student.allMarks.InternalAssessment &&
                         <div className="row mt-3">
-                            <div className="col-md-8 m-auto">
+                            <div className="col-md-8 m-auto table-responsive">
                                 {store.student.allMarks.InternalAssessment.length !== 0 ? <>
                                     <h4>InternalAssessment</h4>
-                                    <table id="example" className="table table-striped table-bordered table-info table-hover">
+                                    <table id="example" className="table table-striped table-bordered table-info table-hover table-responsive">
                                         <thead className='table-dark'>
                                             <tr>
                                                 <th scope="col">S.No</th>
@@ -48,7 +48,7 @@ const StudentTestPerformance = () => {
                                                         <td>{res.subject.subjectName}</td>
                                                         <td>{res.marks}</td>
                                                         <td>{res.totalMarks}</td>
-                                                        <td>{(res.marks / res.totalMarks) * 100}%</td>
+                                                        <td>{((res.marks / res.totalMarks) * 100).toFixed(2)}%</td>
                                                     </tr>
                                                 )
                                             }
@@ -56,7 +56,7 @@ const StudentTestPerformance = () => {
                                     </table></> : null}
                             </div>
 
-                            <div className="col-md-8 m-auto">
+                            <div className="col-md-8 m-auto table-responsive">
                                 {store.student.allMarks.ClassPresentation.length !== 0 ? <>
                                     <h4>ClassPresentation</h4>
                                     <table className="table table-striped table-bordered table-warning table-hover">
@@ -79,14 +79,14 @@ const StudentTestPerformance = () => {
                                                         <td>{res.subject.subjectName}</td>
                                                         <td>{res.marks}</td>
                                                         <td>{res.totalMarks}</td>
-                                                        <td>{(res.marks / res.totalMarks) * 100}%</td>
+                                                        <td>{((res.marks / res.totalMarks) * 100).toFixed(2)}%</td>
                                                     </tr>
                                                 )
                                             }
                                         </tbody>
                                     </table></> : null}
                             </div>
-                            <div className="col-md-8 m-auto">
+                            <div className="col-md-8 m-auto table-responsive">
                                 {store.student.allMarks.Practical_1.length !== 0 ? <>
                                     <h4>Practical 1</h4>
                                     <table className=" table table-striped table-bordered table-primary table-hover">
@@ -109,14 +109,14 @@ const StudentTestPerformance = () => {
                                                         <td>{res.subject.subjectName}</td>
                                                         <td>{res.marks}</td>
                                                         <td>{res.totalMarks}</td>
-                                                        <td>{(res.marks / res.totalMarks) * 100}%</td>
+                                                        <td>{((res.marks / res.totalMarks) * 100).toFixed(2)}%</td>
                                                     </tr>
                                                 )
                                             }
                                         </tbody>
                                     </table></> : null}
                             </div>
-                            <div className="col-md-8 m-auto">
+                            <div className="col-md-8 m-auto table-responsive">
                                 {store.student.allMarks.Practical_2.length !== 0 ? <>
                                     <h4>Practical 2</h4>
                                     <table className="table table-striped table-bordered table-success table-hover">
@@ -139,14 +139,14 @@ const StudentTestPerformance = () => {
                                                         <td>{res.subject.subjectName}</td>
                                                         <td>{res.marks}</td>
                                                         <td>{res.totalMarks}</td>
-                                                        <td>{(res.marks / res.totalMarks) * 100}%</td>
+                                                        <td>{((res.marks / res.totalMarks) * 100).toFixed(2)}%</td>
                                                     </tr>
                                                 )
                                             }
                                         </tbody>
                                     </table></> : null}
                             </div>
-                            <div className="col-md-8 m-auto">
+                            <div className="col-md-8 m-auto table-responsive">
                                 {store.student.allMarks.Activity.length !== 0 ? <>
                                     <h4>Activity</h4>
                                     <table className="table table-striped table-bordered table-danger table-hover">
@@ -169,14 +169,14 @@ const StudentTestPerformance = () => {
                                                         <td>{res.subject.subjectName}</td>
                                                         <td>{res.marks}</td>
                                                         <td>{res.totalMarks}</td>
-                                                        <td>{(res.marks / res.totalMarks) * 100}%</td>
+                                                        <td>{((res.marks / res.totalMarks) * 100).toFixed(2)}%</td>
                                                     </tr>
                                                 )
                                             }
                                         </tbody>
                                     </table></> : null}
                             </div>
-                            <div className="col-md-8 m-auto">
+                            <div className="col-md-8 m-auto table-responsive">
                                 {store.student.allMarks.Viva.length !== 0 ? <>
                                     <h4>Viva</h4>
                                     <table className="table table-striped table-bordered table-secondary table-hover">
@@ -199,14 +199,14 @@ const StudentTestPerformance = () => {
                                                         <td>{res.subject.subjectName}</td>
                                                         <td>{res.marks}</td>
                                                         <td>{res.totalMarks}</td>
-                                                        <td>{(res.marks / res.totalMarks) * 100}%</td>
+                                                        <td>{((res.marks / res.totalMarks) * 100).toFixed(2)}%</td>
                                                     </tr>
                                                 )
                                             }
                                         </tbody>
                                     </table></> : null}
                             </div>
-                            <div className="col-md-8 m-auto">
+                            <div className="col-md-8 m-auto table-responsive">
                                 {store.student.allMarks.OJT.length !== 0 ? <>
                                     <h4>OJT</h4>
                                     <table className="table table-striped table-bordered table-dark table-hover">
@@ -229,7 +229,7 @@ const StudentTestPerformance = () => {
                                                         <td>{res.subject.subjectName}</td>
                                                         <td>{res.marks}</td>
                                                         <td>{res.totalMarks}</td>
-                                                        <td>{(res.marks / res.totalMarks) * 100}%</td>
+                                                        <td>{((res.marks / res.totalMarks) * 100).toFixed(2)}%</td>
                                                     </tr>
                                                 )
                                             }

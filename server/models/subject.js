@@ -8,7 +8,8 @@ const subjectSchema = new Schema({
     },
     subjectCode: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     subjectName: {
         type: String,
