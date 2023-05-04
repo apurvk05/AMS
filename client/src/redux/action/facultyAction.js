@@ -10,7 +10,7 @@ const setFaculty = (data) => {
     }
 }
 
-const url = "https://sore-teal-panther-sock.cyclic.app"
+const url = "https://easy-plum-katydid-toga.cyclic.app"
 
 const fetchStudentsHelper = (data) => {
     return {
