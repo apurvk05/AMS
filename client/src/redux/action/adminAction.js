@@ -7,8 +7,7 @@ import {
 } from '../actionTypes'
 
 // const url = "https://sore-teal-panther-sock.cyclic.app"
-const url ="https://easy-plum-katydid-toga.cyclic.app"
-const url1 = "https://easy-plum-katydid-toga.cyclic.app"
+const url ="https://amsproject.onrender.com"
 
 const setAdmin = (data) => {
     return {
@@ -310,7 +309,7 @@ export const adminDeleteFaculty = (regId) => {
         try {
             const { data } = await axios({
                 method: 'Post',
-                url: url1 + "/api/admin/deleteFaculty",
+                url: url + "/api/admin/deleteFaculty",
                 data: regId
             })
             dispatch(adminDeleteFacultyFlag(true))
@@ -330,7 +329,7 @@ export const adminDeleteStudent = (regId) => {
         try {
             const { data } = await axios({
                 method: 'Post',
-                url: url1 + "/api/admin/deleteStudent",
+                url: url + "/api/admin/deleteStudent",
                 data: regId
             })
             dispatch(adminDeleteStudentFlag(true))
@@ -350,7 +349,7 @@ export const adminDeleteSubject = (code) => {
         try {
             const { data } = await axios({
                 method: 'Post',
-                url: url1 + "/api/admin/deleteSubject",
+                url: url + "/api/admin/deleteSubject",
                 data: code
             })
             dispatch(adminDeleteSubjectFlag(true))
